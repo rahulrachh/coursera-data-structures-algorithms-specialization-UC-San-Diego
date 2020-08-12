@@ -6,3 +6,5 @@ This specialization is a deep dive into various algorithms, data sructures and t
 * NATIONAL RESEARCH UNIVERSITY HIGHER SCHOOL OF ECONOMICS.
 
 This is an excellent course so far and highly recommended if you are highly interested in studying Data Structures and Algorithms.
+
+The code samples are in Python3. These are my implementation of some problems that are part of this specialization.
