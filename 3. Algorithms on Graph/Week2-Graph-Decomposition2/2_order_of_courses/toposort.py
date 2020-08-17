@@ -1,4 +1,4 @@
-# Uses python3
+# Uses only python3
 import sys
 
 def dfs(adj, used, order, x):
