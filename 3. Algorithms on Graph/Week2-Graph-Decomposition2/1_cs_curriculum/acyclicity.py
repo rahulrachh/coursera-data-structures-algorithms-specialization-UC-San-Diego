@@ -1,18 +1,37 @@
 #Uses python3
-
 import sys
 
+def reach(adj, x, y):
+    #write your code here
+    if y in adj[x]:
+        return 1
+    visited[x] = True
+    for i in adj[x]:
+        if not visited[i]:
+            j = reach(adj, i, y)
+            if j == 1: return 1
 
 def acyclic(adj):
-    return 0
+    for x in range(1, len(adj)):
+        cycle = reach(adj, x, x)
+        if cycle == 1:
+            return 1
 
 if __name__ == '__main__':
-    input = sys.stdin.read()
-    data = list(map(int, input.split()))
-    n, m = data[0:2]
-    data = data[2:]
-    edges = list(zip(data[0:(2 * m):2], data[1:(2 * m):2]))
-    adj = [[] for _ in range(n)]
-    for (a, b) in edges:
-        adj[a - 1].append(b - 1)
-    print(acyclic(adj))
+    i = input()
+    data = list(map(int, i.split()))
+    v, e = data
+    adj = [[] for _ in range(v+1)]
+    for _ in range(1, e+1):
+        data_new = input()
+        data_new = data_new.split()
+        x, y = int(data_new[0]), int(data_new[1])
+        adj[x].append(y)
+    global visited
+    visited = [False] * (v + 1)
+
+    pk = acyclic(adj)
+    if pk:
+        print(1)
+    else:
+        print(0)
