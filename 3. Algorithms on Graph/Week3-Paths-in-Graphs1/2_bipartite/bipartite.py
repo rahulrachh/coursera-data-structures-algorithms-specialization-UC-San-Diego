@@ -32,8 +32,4 @@ if __name__ == '__main__':
         adj[y].append(x)
         adj[x].append(y)
 
-    path = bipartite(adj)
-    if path == 1:
-        print(1)
-    else:
-        print(0)
+    print(bipartite(adj))
