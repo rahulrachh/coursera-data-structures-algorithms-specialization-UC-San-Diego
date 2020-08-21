@@ -20,7 +20,7 @@ def distance(adj, cost, s, t):
                 Only adding nodes to the queue that have lower distance
                 compared to other nodes that are present, so no need
                 to extract the minimum as we we are only adding nodes that 
-                have improved distance which is less than the others.
+                have improved distance which is less than their previous distances.
                 """
                 qH.put(v)
 
