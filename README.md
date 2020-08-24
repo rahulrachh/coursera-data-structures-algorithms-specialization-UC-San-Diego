@@ -10,4 +10,4 @@ This specialization is a deep dive into various algorithms, data sructures and t
 
 This is an excellent course so far and highly recommended if you are gravely interested in studying Data Structures and Algorithms.
 
-The code samples are in Python3. These are my implementation of some problems that are part of this specialization.
+The code samples are in Python3. These are the implementations of some problems that are part of this specialization.
