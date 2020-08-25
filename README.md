@@ -1,6 +1,8 @@
 # Data Structures and Algorithms Specialization
 
-![course_image](https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/2a/34a150d9ad11e5bd22cb7d7d7686df/logo3.png?auto=format%2Ccompress&dpr=1&w=175&h=175&fit=fill&bg=FFF)
+![course_image](https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/2a/34a150d9ad11e5bd22cb7d7d7686df/logo3.png?auto=format%2Ccompress&dpr=1&w=175&h=175&fit=fill&bg=FFF) 
+
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=rahulrachh.data-structures-algorithms-specialization-coursera-UC-San-Diego)
 
 [This](https://www.coursera.org/specializations/data-structures-algorithms) is a Coursera specialization for intermediate programmers which consists of 6 courses. Individuals with proficiency in any programming language can take this course. They offer starter files in various programming languages but further ahead in course, they provide starter files only in C++, Java and Python3.
 
