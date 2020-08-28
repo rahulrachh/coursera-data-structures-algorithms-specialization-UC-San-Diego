@@ -1,7 +1,6 @@
 #Uses python3
 import math
 
-
 def minimum_distance(n, x, y):
     # result = 0
     #write your code here
