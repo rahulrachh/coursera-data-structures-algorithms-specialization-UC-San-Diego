@@ -1,7 +1,7 @@
 # uses python3
 
 def negative_cycle(adj, cost):
-    dist = [-1] * len(adj)
+    dist = [float('inf')] * len(adj)
     dist[0] = 0
 
     for i in range(len(adj)):
