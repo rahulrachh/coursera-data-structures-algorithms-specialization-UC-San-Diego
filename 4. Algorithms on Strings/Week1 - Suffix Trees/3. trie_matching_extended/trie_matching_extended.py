@@ -1,26 +1,76 @@
-# python3
+# uses python3
 import sys
 
-NA = -1
+def build_trie(patterns):
+    tree = dict()
+    node = 0
 
-class Node:
-	def __init__ (self):
-		self.next = [NA] * 4
-		self.patternEnd = False
+    for pattern in patterns:
+        i = 0
 
-def solve (text, n, patterns):
-	result = []
+        for letter in pattern:
+            if tree.get(i):
+                if letter not in tree[i]:
+                    tree[i].update({letter: node+1})
+                    node += 1
+                    i = node
+                else:
+                    i = tree[i][letter]
+                    # i += 1
+            else:
+                tree[i] = {letter: node+1}
+                node += 1
+                i += 1
 
-	// write your code here
+    return tree
 
-	return result
+def find_pattern_extended(text, trie):
+    indexes = []
+    i = 0
+    j = 0
+    root = trie[0]
+    v = root
+    # pattern = True
+    pattern_index = []
+    while j < len(text):
+        # letter = text[i]
+        while i < len(text) and text[i] in v:
+            if '$' in trie[v[text[i]]]:
+                # j += 1
+                if pattern_index:
+                    indexes.append(pattern_index[0])
+                else:
+                    indexes.append(j)
+                break
+            else:
+                v = trie[v[text[i]]]
+                pattern_index.append(i)
+                i += 1
 
-text = sys.stdin.readline ().strip ()
-n = int (sys.stdin.readline ().strip ())
+        j += 1
+        i = j
+        v = root
+        pattern_index.clear()
+
+
+    return indexes if len(indexes) > 0 else None
+
+
+text = input()
+# print(text)
+n = int(input())
+# print(n)
 patterns = []
-for i in range (n):
-	patterns += [sys.stdin.readline ().strip ()]
 
-ans = solve (text, n, patterns)
+for i in range(n):
+    patterns.append(input()+'$')
 
-sys.stdout.write (' '.join (map (str, ans)) + '\n')
+# print(patterns)
+trie = build_trie(patterns)
+
+indexes_pattern = find_pattern_extended(text, trie)
+
+if indexes_pattern:
+    print(' '.join (map (str, indexes_pattern)))
+else:
+    print()
