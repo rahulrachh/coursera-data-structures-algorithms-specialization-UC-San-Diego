@@ -1,5 +1,5 @@
 #Uses python3
-
+ 
 def build_trie(patterns):
     tree = dict()
     node = 0
@@ -14,7 +14,7 @@ def build_trie(patterns):
                     node += 1
                     i = node
                 else:
-                    i = tree[i][letter]
+                    i = tree[i][letter] # move to the node where the next letter of the sequence is present
             else:
                 tree[i] = {letter: node+1}
                 node += 1
