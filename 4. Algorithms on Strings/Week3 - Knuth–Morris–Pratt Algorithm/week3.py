@@ -1,4 +1,4 @@
 """
-knuth-morris-pratt algorithm implementation is in next week.
-This week only contains a quiz.
+knuth-morris-pratt algorithm implementation is in next week4.
+Week3 only contains a quiz.
 """
