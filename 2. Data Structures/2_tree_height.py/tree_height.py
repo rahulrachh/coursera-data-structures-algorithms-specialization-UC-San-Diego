@@ -3,7 +3,6 @@
 import sys
 import threading
 import collections
-import collections
 
 def compute_height(n, parents):
     # Replace this code with a faster implementation
